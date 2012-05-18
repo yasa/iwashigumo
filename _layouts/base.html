@@ -1,0 +1,91 @@
+---
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{{ page.title }}</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+    <div id="wrap" class="row">
+      <div class="row">
+        <div class="eight columns">
+          <header class="row">
+            <h3 id="header-title">Iwashigumo</h3>
+            <h4 class="subtitle">A mi könyvünk, a világról, rólad, neked.</h4>
+          </header>
+
+          <div class="row content">
+            {{ content }}
+          </div>
+        </div>
+
+        <div id="sidebar" class="four columns">
+          <div>
+            <img id="profile-pic" src="/images/mi.jpg" alt="Mi ketten" />
+          </div>
+          <div class="twelve phone-three columns">
+            <div class="panel">
+              {% capture about %}{% include about.markdown %}{% endcapture %}
+              {{ about | markdownify }}
+            </div>
+            <div class="panel">
+              <h3>Legutolsó könyvlapok</h3>
+              <ul>
+                {% for post in site.posts limit: 5 %}
+                <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="row">
+          <hr />
+          <em>Az Iwashigumo Yasa és Scor közös munkája. Olvasgasd bátran!</em>
+        </footer>
+      </div>
+    </div>
+	</div>
+
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/modernizr.foundation.js"></script>
+	<!--<script src="/javascripts/jquery.reveal.js"></script>-->
+	<!--<script src="/javascripts/jquery.orbit-1.3.0.js"></script>-->
+	<script src="/javascripts/forms.jquery.js"></script>
+	<script src="/javascripts/jquery.customforms.js"></script>
+	<script src="/javascripts/jquery.placeholder.min.js"></script>
+	<script src="/javascripts/app.js"></script>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'iwashigumo'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31880691-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>

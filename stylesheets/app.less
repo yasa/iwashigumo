@@ -1,0 +1,151 @@
+@import url("../fonts/gentiumplus/stylesheet.css");
+@import url("../fonts/ubuntu/stylesheet.css");
+
+header.row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'GentiumPlus';
+  //font-style: italic;
+  font-weight: normal;
+}
+
+header.row {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: 'UbuntuCondensed';
+    font-style: normal;
+
+    &.slogan {
+      padding-top: 1em;
+    }
+  }
+  h3 {
+    letter-spacing: -0.05em;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    font-size: 128px;
+    font-size: 12.8rem;
+    line-height: 1;
+  }
+  h4 {
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 1;
+  }
+}
+
+@body-bg: #F6EFE8;
+@wrap-bg: fadeout(lighten(@body-bg, 4%), 15%);
+body {
+  font-family: 'Ubuntu', inherit;
+  background-color: @body-bg;
+  /* http://css-tricks.com/perfect-full-page-background-image/ */
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+  font-size: 16px;
+  font-size: 1.6rem;
+  p { line-height: 1.5; }
+}
+
+#wrap { background-color: @wrap-bg; }
+
+// padding a hátterek miatt
+#wrap { padding-left: 2.5%; padding-right: 2.5%; width: 95%; }
+
+// padding nem árt felülre-alulra
+body { padding-top: 20px; padding-bottom: 20px; }
+footer { padding-bottom: 20px; }
+// egy kis kerekítés és árnyék
+#wrap {
+  #hl.rounded-corners(4px, 4px, 4px, 4px);
+  #hl.drop-shadow(1px, 1px, 10px, desaturate(darken(@body-bg, 12%), 30%));
+}
+// date méret
+.date { font-size: 12px; font-size: 1.2rem; }
+// date padding
+.date { margin-top: 0.5rem; margin-bottom: 2rem; }
+
+// footer méret
+footer { font-size: 14px; font-size: 1.4rem; }
+
+// fejléc betűszínek
+@main-header-lighten: 30%;
+@sub-header-lighten: 45%;
+header {
+  h3 { color: lighten(#000, @main-header-lighten); }
+  h4 { color: lighten(#000, @sub-header-lighten); }
+}
+
+// fejléc szöveg árnyékolása?
+header {
+  h3, h4 { #hl.text-shadow(1px, 2px, 1px, fadeout(#666, 50%)); }
+}
+
+// nem kell ennyi padding a fejléc címsornak
+header.row { padding-top: 0; }
+
+// bulleted list
+ul { list-style: disc outside; }
+ul li { margin-left: 30px; }
+
+// article h1 color
+@article-header-lighten: 20%;
+article h1 {
+  color: lighten(#000, @article-header-lighten);
+}
+
+// page nav space
+.page-nav-top { padding-top: 1em; padding-bottom: 1em;}
+// page nav size
+.page-nav-top { font-size: 12px; font-size: 1.2rem; }
+
+#sidebar {
+  position: relative;
+}
+
+#sidebar .panel {
+  position: relative;
+  z-index: 5;
+}
+
+// profile pic shadow and rotation
+#profile-pic {
+  position: relative;
+  z-index: 10;
+  #hl.drop-shadow(2px, 2px, 4px, darken(@wrap-bg, 60%));
+  #hl.rotate(2deg);
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+// tilt profile pic in the other direction on mobile
+@media only screen and (max-width: 767px) {
+  #profile-pic { #hl.rotate(-2deg); }
+}
+// code tag, prettier way
+code {
+  font-family: 'UbuntuMono';
+  background-color: desaturate(darken(@wrap-bg, 10%), 10%);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+
+.page-nav-item a { display: block; }
+.page-nav-item a[rel~="next"] { text-align: right; }
+
+p, ul, ol {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
