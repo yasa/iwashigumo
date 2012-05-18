@@ -49,9 +49,10 @@ Nem is tudom...
 Mennyi teher van a hátunkon? Elég? Sok? Kevés? Nem tudom már felmérni. Azt tudom,
 hogy úgy élünk, hogy egy pillanatig sem szabad teljesen leállnunk.
 
-...amikor dolgozom érted, amikor dolgozom másokért: úgy érzem, van miért élnem.
+...amikor dolgozom érted, amikor dolgozom másokért: úgy érzem, az rengeteg mindennek
+értelmet tud adni.
 
-De nem azért élek, hogy dolgozzak, hanem **azért dolgozok, hogy élhessek**... Nagyon
+De mégsem azért élek, hogy dolgozzak, hanem **azért dolgozok, hogy élhessek**... Nagyon
 nagy a különbség. Most is, az éjszaka közepén, amikor nyűvöm szokásos eszközeimet,
 hogy majd holnap (valahogy délután táján) mosolyt csaljak vele az arcodra. Legalábbis
 nagyon remélem, hogy amikor meglátod ezt, mosolyogni fogsz. *És akkor tudni fogom,
