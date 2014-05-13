@@ -1,8 +1,9 @@
 ---
 layout: post
+date: "2012-05-18 22:17:00 +0200"
 title: Ahol a könyv elindul...
 permalink: 2012/05/ahol-a-konyv-elindul
-date: 2012-05-18 22:17
+
 ---
 
 ### ...avagy Scor bevezető gondolatai

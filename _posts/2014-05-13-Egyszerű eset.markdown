@@ -2,7 +2,7 @@
 layout: post
 title: Egyszerű eset
 permalink: 2014/05/egyszeru-eset
-date: 2014-05-13 22:17
+date: 2014-05-13 23:17:00 +0200
 ---
 
 *"Csak ülök és bámulom, ahogy nőnek az árnyak"*, gondolta. Márpedig az árnyak, azok folyamatosan nőttek.
